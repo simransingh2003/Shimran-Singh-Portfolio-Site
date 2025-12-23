@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shimran Singh - Cybersecurity & IT Portfolio</title>
-<<<<<<< HEAD
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-=======
->>>>>>> f0a094b43fba4464839627af5c79f247b68c5ddb
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * { scroll-behavior: smooth; }
@@ -28,20 +23,27 @@
             50% { transform: translateY(-10px); }
         }
         .bounce { animation: bounce 2s infinite; }
-<<<<<<< HEAD
         .metric {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #34d399;
-}
-.metric-card {
-  padding: 2rem;
-  border-radius: 1rem;
-  background: rgba(255,255,255,0.05);
-}
-
-=======
->>>>>>> f0a094b43fba4464839627af5c79f247b68c5ddb
+            font-size: 3rem;
+            font-weight: bold;
+            color: #34d399;
+        }
+        .metric-card {
+            padding: 2rem;
+            border-radius: 1rem;
+            background: rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -51,13 +53,11 @@
             <button onclick="scrollToSection('home')" class="font-bold text-xl">Shimran Singh</button>
             <div class="hidden md:flex items-center gap-6">
                 <button onclick="scrollToSection('about')" class="hover:text-blue-400 transition">About</button>
+                <button onclick="scrollToSection('impact')" class="hover:text-blue-400 transition">Impact</button>
                 <button onclick="scrollToSection('experience')" class="hover:text-blue-400 transition">Experience</button>
                 <button onclick="scrollToSection('projects')" class="hover:text-blue-400 transition">Projects</button>
                 <button onclick="scrollToSection('skills')" class="hover:text-blue-400 transition">Skills</button>
                 <button onclick="scrollToSection('contact')" class="hover:text-blue-400 transition">Contact</button>
-                <button onclick="toggleDarkMode()" class="p-2 rounded hover:bg-gray-800">
-                    <span id="theme-icon">☀️</span>
-                </button>
             </div>
             <button onclick="toggleMenu()" class="md:hidden p-2">
                 <span id="menu-icon">☰</span>
@@ -65,6 +65,7 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
             <button onclick="scrollToSection('about')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">About</button>
+            <button onclick="scrollToSection('impact')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Impact</button>
             <button onclick="scrollToSection('experience')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Experience</button>
             <button onclick="scrollToSection('projects')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Projects</button>
             <button onclick="scrollToSection('skills')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Skills</button>
@@ -100,71 +101,6 @@
     <section id="about" class="py-20 px-4 bg-gray-800/50">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
-<<<<<<< HEAD
-            <div 
-  id="about-content"
-  class="prose prose-invert max-w-none text-gray-300">
-</div>
-
-        </div>
-    </section>
-
-    <section id="impact" class="py-20 bg-gray-800">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-12">📊 Impact Metrics</h2>
-
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="metric-card">
-        <h3 class="metric" data-value="65">0</h3>
-        <p>% Scan Time Reduced</p>
-      </div>
-      <div class="metric-card">
-        <h3 class="metric" data-value="40">0</h3>
-        <p>% False Positives Reduced</p>
-      </div>
-      <div class="metric-card">
-        <h3 class="metric" data-value="30">0</h3>
-        <p>+ Members Led</p>
-      </div>
-      <div class="metric-card">
-        <h3 class="metric" data-value="5">0</h3>
-        <p>Major Projects</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  const LANG = {
-    en: {
-      heroTitle: "Where Security Meets Innovation",
-      contact: "Let's Connect"
-    },
-    hi: {
-      heroTitle: "जहाँ सुरक्षा और नवाचार मिलते हैं",
-      contact: "संपर्क करें"
-    }
-  };
-
-  let currentLang = localStorage.getItem("lang") || "en";
-
-  function applyLang() {
-    document.getElementById("hero-title").innerText =
-      LANG[currentLang].heroTitle;
-    document.getElementById("contact-title").innerText =
-      LANG[currentLang].contact;
-  }
-
-  function toggleLang() {
-    currentLang = currentLang === "en" ? "hi" : "en";
-    localStorage.setItem("lang", currentLang);
-    applyLang();
-  }
-
-  applyLang();
-</script>
-
-=======
             <div class="space-y-6 text-lg leading-relaxed text-gray-300">
                 <p>I'm a BSc Information Technology graduate from Academic City University in Ghana (GPA: 3.3/4.0), passionate about cybersecurity, network security, and automation. My journey in tech has been driven by curiosity about how systems work—and more importantly, how they can be exploited and secured.</p>
                 <p>During my internship at Buck Press LTD, I gained hands-on experience testing Ghana's Passport Application Portal, identifying bugs, and working with system administration tasks. But my real passion emerged during my final year project: building VulnScout, an automated vulnerability scanning tool that detects HTTP request smuggling, information disclosure, and remote code execution vulnerabilities.</p>
@@ -173,19 +109,42 @@
         </div>
     </section>
 
->>>>>>> f0a094b43fba4464839627af5c79f247b68c5ddb
-    <section id="experience" class="py-20 px-4">
+    <section id="impact" class="py-20 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">📊 Impact Metrics</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="metric-card">
+                    <h3 class="metric" data-value="65">0</h3>
+                    <p class="text-gray-400">% Scan Time Reduced</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric" data-value="40">0</h3>
+                    <p class="text-gray-400">% False Positives Reduced</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric" data-value="30">0</h3>
+                    <p class="text-gray-400">+ Members Led</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric" data-value="5">0</h3>
+                    <p class="text-gray-400">Major Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-4 bg-gray-800/50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center">Experience & Education</h2>
             
             <div class="space-y-8">
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-2xl font-bold">Data Analytics Job Simulation</h3>
                             <p class="text-blue-400">Deloitte Australia (Forage)</p>
                         </div>
-                        <span class="text-gray-400">July 2025</span>
+                        <span class="text-gray-400 mt-2 md:mt-0">July 2025</span>
                     </div>
                     <ul class="space-y-2 text-gray-300">
                         <li>• Completed job simulation involving data analysis and forensic technology</li>
@@ -194,13 +153,13 @@
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-2xl font-bold">IT Intern</h3>
                             <p class="text-blue-400">Buck Press LTD, Ghana</p>
                         </div>
-                        <span class="text-gray-400">May 2024 - Jul 2024</span>
+                        <span class="text-gray-400 mt-2 md:mt-0">May 2024 - Jul 2024</span>
                     </div>
                     <ul class="space-y-2 text-gray-300">
                         <li>• Tested Ghana's Passport Application Portal; identified bugs and recommended improvements</li>
@@ -210,13 +169,13 @@
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-2xl font-bold">Digital Transformation Job Simulation</h3>
                             <p class="text-blue-400">BCG (Forage)</p>
                         </div>
-                        <span class="text-gray-400">November 2024</span>
+                        <span class="text-gray-400 mt-2 md:mt-0">November 2024</span>
                     </div>
                     <ul class="space-y-2 text-gray-300">
                         <li>• Completed practical tasks in market research and use case development</li>
@@ -225,13 +184,13 @@
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
-                    <div class="flex justify-between items-start mb-3">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
                         <div>
                             <h3 class="text-2xl font-bold">BSc Information Technology</h3>
                             <p class="text-blue-400">Academic City University, Accra, Ghana</p>
                         </div>
-                        <span class="text-gray-400">Jan 2022 - Jun 2025</span>
+                        <span class="text-gray-400 mt-2 md:mt-0">Jan 2022 - Jun 2025</span>
                     </div>
                     <p class="text-gray-300 mb-2">GPA: 3.3/4.0</p>
                     <p class="text-gray-400 text-sm">Relevant Coursework: Data Analysis, Database Systems, Cybersecurity, Computer Networks, Operating Systems, Web Development, Mobile App Development, Wireless Networks</p>
@@ -240,12 +199,12 @@
         </div>
     </section>
 
-    <section id="projects" class="py-20 px-4 bg-gray-800/50">
+    <section id="projects" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-8 text-center">Featured Projects</h2>
             
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition ring-2 ring-blue-500/50">
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 ring-2 ring-blue-500/50">
                     <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded-full mb-3">Final Year Project</span>
                     <h3 class="text-2xl font-bold mb-3">VulnScout - Automated Vulnerability Scanner</h3>
                     <div class="space-y-3 mb-4">
@@ -267,7 +226,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500">
                     <h3 class="text-2xl font-bold mb-3">Kripa Pharma E-Commerce Platform</h3>
                     <div class="space-y-3 mb-4">
                         <p class="text-gray-400"><span class="font-semibold text-blue-400">Problem:</span> Limited access to medicines from worldwide suppliers</p>
@@ -282,7 +241,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500">
                     <h3 class="text-2xl font-bold mb-3">QuizzBayy - Educational Gaming App</h3>
                     <div class="space-y-3 mb-4">
                         <p class="text-gray-400"><span class="font-semibold text-blue-400">Purpose:</span> Help users increase general knowledge through interactive quizzes</p>
@@ -296,7 +255,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500">
                     <h3 class="text-2xl font-bold mb-3">Network Threat Detection System</h3>
                     <div class="space-y-3 mb-4">
                         <p class="text-gray-400"><span class="font-semibold text-blue-400">Focus:</span> Implementing Nmap automation for vulnerability testing and reporting</p>
@@ -315,12 +274,12 @@
         </div>
     </section>
 
-    <section id="skills" class="py-20 px-4">
+    <section id="skills" class="py-20 px-4 bg-gray-800/50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Programming Languages</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 text-sm rounded bg-gray-700">Python</span>
@@ -331,7 +290,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Security Tools</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 text-sm rounded bg-gray-700">Nmap</span>
@@ -342,7 +301,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Tools & Platforms</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 text-sm rounded bg-gray-700">Tableau</span>
@@ -353,7 +312,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Design Tools</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 text-sm rounded bg-gray-700">Canva</span>
@@ -361,7 +320,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Soft Skills</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 text-sm rounded bg-gray-700">Leadership</span>
@@ -372,7 +331,7 @@
                     </div>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Languages</h3>
                     <div class="space-y-2 text-gray-300">
                         <p>English (High Proficiency)</p>
@@ -383,18 +342,18 @@
         </div>
     </section>
 
-    <section id="leadership" class="py-20 px-4 bg-gray-800/50">
+    <section id="leadership" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center">Leadership & Involvement</h2>
             
             <div class="space-y-6">
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-2">Membership Chairperson - Accra Academic City Leo Club</h3>
                     <p class="text-blue-400 mb-3">Oct 2024 - May 2025</p>
                     <p class="text-gray-300">Currently leading membership initiatives and organizational growth</p>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-2">President - Accra Academic City Leo Club</h3>
                     <p class="text-blue-400 mb-3">Nov 2022 - Oct 2024</p>
                     <ul class="space-y-2 text-gray-300">
@@ -403,13 +362,13 @@
                     </ul>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-2">Student Ambassador - Academic City University</h3>
                     <p class="text-blue-400 mb-3">Feb 2024 - Feb 2025</p>
                     <p class="text-gray-300">Represented the university at various events and occasions</p>
                 </div>
 
-                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
                     <h3 class="text-xl font-bold mb-2">Interviewer & Researcher - Tell Me More Radio Show</h3>
                     <p class="text-blue-400 mb-3">Apr 2022 - Aug 2023</p>
                     <ul class="space-y-2 text-gray-300">
@@ -421,44 +380,9 @@
         </div>
     </section>
 
-<<<<<<< HEAD
-    <script>
-  const counters = document.querySelectorAll('.metric');
-
-  const runCounter = (el) => {
-    const target = +el.dataset.value;
-    let count = 0;
-
-    const interval = setInterval(() => {
-      count++;
-      el.innerText = count;
-      if (count >= target) clearInterval(interval);
-    }, 20);
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        runCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  counters.forEach(counter => observer.observe(counter));
-</script>
-
-
-    <section id="contact" class="py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 id="hero-title">Where Security Meets Innovation</h2>
-<h2 id="contact-title">Let's Connect</h2>
-
-=======
-    <section id="contact" class="py-20 px-4">
+    <section id="contact" class="py-20 px-4 bg-gray-800/50">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
->>>>>>> f0a094b43fba4464839627af5c79f247b68c5ddb
             <p class="text-gray-400 mb-12">Whether you're looking to collaborate on cybersecurity projects, discuss IT security, or explore opportunities—I'd love to hear from you!</p>
             
             <div class="flex flex-wrap justify-center gap-6 mb-12">
@@ -489,19 +413,6 @@
             </div>
         </div>
     </section>
-<<<<<<< HEAD
-    <section id="admin-editor" class="hidden max-w-4xl mx-auto p-6">
-  <h2 class="text-2xl font-bold mb-4">📝 Edit About / Achievements</h2>
-  <div id="editor" class="bg-white text-black rounded"></div>
-
-  <button onclick="saveRichText()"
-    class="mt-4 px-6 py-2 bg-emerald-500 text-white rounded">
-    Save Content
-  </button>
-</section>
-
-=======
->>>>>>> f0a094b43fba4464839627af5c79f247b68c5ddb
 
     <footer class="py-12 px-4 border-t border-gray-800">
         <div class="max-w-6xl mx-auto text-center">
@@ -529,39 +440,35 @@
             icon.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
         }
 
-        function toggleDarkMode() {
-            alert('Dark mode is always on for that hacker aesthetic! 🌙');
-        }
-<<<<<<< HEAD
-
+        // Animated counter for impact metrics
+        const counters = document.querySelectorAll('.metric');
         
-  const quill = new Quill('#editor', {
-    theme: 'snow',
-    placeholder: 'Write like Notion…',
-    modules: {
-      toolbar: [
-        ['bold', 'italic', 'underline'],
-        [{ 'header': [1, 2, 3, false] }],
-        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-        ['link', 'blockquote', 'code-block']
-      ]
-    }
-  });
+        const runCounter = (el) => {
+            const target = +el.dataset.value;
+            let count = 0;
+            const increment = target / 50;
+            
+            const interval = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    el.innerText = target;
+                    clearInterval(interval);
+                } else {
+                    el.innerText = Math.floor(count);
+                }
+            }, 30);
+        };
 
-  // Load saved content
-  const saved = localStorage.getItem("rich-about");
-  if (saved) {
-    quill.root.innerHTML = saved;
-  }
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
 
-  function saveRichText() {
-    localStorage.setItem("rich-about", quill.root.innerHTML);
-    alert("Saved!");
-  }
-
-
-=======
->>>>>>> f0a094b43fba4464839627af5c79f247b68c5ddb
+        counters.forEach(counter => observer.observe(counter));
     </script>
 </body>
 </html>
