@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimran Singh - Cybersecurity & IT Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 1s ease-out; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .bounce { animation: bounce 2s infinite; }
+        .metric {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #34d399;
+        }
+        .metric-card {
+            padding: 2rem;
+            border-radius: 1rem;
+            background: rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+            <button onclick="scrollToSection('home')" class="font-bold text-xl">Shimran Singh</button>
+            <div class="hidden md:flex items-center gap-6">
+                <button onclick="scrollToSection('about')" class="hover:text-blue-400 transition">About</button>
+                <button onclick="scrollToSection('impact')" class="hover:text-blue-400 transition">Impact</button>
+                <button onclick="scrollToSection('experience')" class="hover:text-blue-400 transition">Experience</button>
+                <button onclick="scrollToSection('projects')" class="hover:text-blue-400 transition">Projects</button>
+                <button onclick="scrollToSection('skills')" class="hover:text-blue-400 transition">Skills</button>
+                <button onclick="scrollToSection('contact')" class="hover:text-blue-400 transition">Contact</button>
+            </div>
+            <button onclick="toggleMenu()" class="md:hidden p-2">
+                <span id="menu-icon">☰</span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <button onclick="scrollToSection('about')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">About</button>
+            <button onclick="scrollToSection('impact')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Impact</button>
+            <button onclick="scrollToSection('experience')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Experience</button>
+            <button onclick="scrollToSection('projects')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Projects</button>
+            <button onclick="scrollToSection('skills')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Skills</button>
+            <button onclick="scrollToSection('contact')" class="block w-full text-left px-4 py-2 hover:bg-gray-700">Contact</button>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-16">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">Shimran Anil Singh</h1>
+            <p class="text-3xl md:text-4xl font-light mb-4 text-gray-300">Where Security Meets Innovation</p>
+            <p class="text-xl mb-8 text-gray-400">Cybersecurity Researcher • IT Security Specialist • Data Analyst</p>
+            <p class="text-lg mb-12 text-gray-500 max-w-2xl mx-auto">
+                Building secure networks, automating vulnerability detection, and bridging the gap between security research and real-world implementation
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="scrollToSection('projects')" class="px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition">
+                    View Projects
+                </button>
+                <a href="https://www.linkedin.com/in/simran-singh27" target="_blank" class="px-8 py-3 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition inline-flex items-center gap-2">
+                    💼 LinkedIn
+                </a>
+                <button onclick="scrollToSection('contact')" class="px-8 py-3 border border-gray-600 hover:border-gray-500 rounded-lg font-medium transition">
+                    Contact Me
+                </button>
+            </div>
+            <div class="mt-16 bounce">
+                <span class="text-4xl text-gray-600">↓</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="space-y-6 text-lg leading-relaxed text-gray-300">
+                <p>I'm a BSc Information Technology graduate from Academic City University in Ghana (GPA: 3.3/4.0), passionate about cybersecurity, network security, and automation. My journey in tech has been driven by curiosity about how systems work—and more importantly, how they can be exploited and secured.</p>
+                <p>During my internship at Buck Press LTD, I gained hands-on experience testing Ghana's Passport Application Portal, identifying bugs, and working with system administration tasks. But my real passion emerged during my final year project: building VulnScout, an automated vulnerability scanning tool that detects HTTP request smuggling, information disclosure, and remote code execution vulnerabilities.</p>
+                <p>I believe cybersecurity isn't just about finding vulnerabilities—it's about understanding the human element, communicating risks clearly, and building systems that protect people. Whether I'm writing Nmap scripts, analyzing data in Tableau, or leading my Leo Club as Membership Chairperson, I approach every challenge with accountability, adaptability, and a commitment to continuous learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-20 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">📊 Impact Metrics</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="metric-card">
+                    <h3 class="metric" data-value="65">0</h3>
+                    <p class="text-gray-400">% Scan Time Reduced</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric" data-value="40">0</h3>
+                    <p class="text-gray-400">% False Positives Reduced</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric" data-value="30">0</h3>
+                    <p class="text-gray-400">+ Members Led</p>
+                </div>
+                <div class="metric-card">
+                    <h3 class="metric" data-value="5">0</h3>
+                    <p class="text-gray-400">Major Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Experience & Education</h2>
+            
+            <div class="space-y-8">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-2xl font-bold">Data Analytics Job Simulation</h3>
+                            <p class="text-blue-400">Deloitte Australia (Forage)</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">July 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Completed job simulation involving data analysis and forensic technology</li>
+                        <li>• Created interactive data dashboards using Tableau for business insights</li>
+                        <li>• Used Excel to classify data and draw actionable business conclusions</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-2xl font-bold">IT Intern</h3>
+                            <p class="text-blue-400">Buck Press LTD, Ghana</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">May 2024 - Jul 2024</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Tested Ghana's Passport Application Portal; identified bugs and recommended improvements</li>
+                        <li>• Assisted in system administration tasks and network troubleshooting</li>
+                        <li>• Set up and evaluated CRM tools (Zendesk, Freshdesk)</li>
+                        <li>• Gained hands-on experience with remote connection tools (TeamViewer)</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-2xl font-bold">Digital Transformation Job Simulation</h3>
+                            <p class="text-blue-400">BCG (Forage)</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">November 2024</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Completed practical tasks in market research and use case development</li>
+                        <li>• Conducted impact assessment & prioritization for digital transformation projects</li>
+                        <li>• Analyzed economics and scaling strategies for technology implementations</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <div>
+                            <h3 class="text-2xl font-bold">BSc Information Technology</h3>
+                            <p class="text-blue-400">Academic City University, Accra, Ghana</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">Jan 2022 - Jun 2025</span>
+                    </div>
+                    <p class="text-gray-300 mb-2">GPA: 3.3/4.0</p>
+                    <p class="text-gray-400 text-sm">Relevant Coursework: Data Analysis, Database Systems, Cybersecurity, Computer Networks, Operating Systems, Web Development, Mobile App Development, Wireless Networks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 ring-2 ring-blue-500/50">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded-full mb-3">Final Year Project</span>
+                    <h3 class="text-2xl font-bold mb-3">VulnScout - Automated Vulnerability Scanner</h3>
+                    <div class="space-y-3 mb-4">
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Problem:</span> Manual vulnerability assessments are time-consuming and error-prone, leaving networks exposed to attacks</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Solution:</span> Developed an automated CLI tool using Nmap, Nikto, and Python that detects HTTP request smuggling, information disclosure, and remote code execution vulnerabilities</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Impact:</span> Reduced scan time by 65%, achieved 40% reduction in false positives through correlation with CVE/NVD APIs, generated visualized reports using Matplotlib</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Role:</span> Lead Developer - Designed NSE scripts, implemented Python automation, created web interface prototype</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Python</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Nmap</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Nikto</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Docker</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Flask</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Matplotlib</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/ElormDesmond/VulnScout/tree/main" target="_blank" class="text-sm text-blue-400 hover:text-blue-300">🔗 GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-3">Kripa Pharma E-Commerce Platform</h3>
+                    <div class="space-y-3 mb-4">
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Problem:</span> Limited access to medicines from worldwide suppliers</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Solution:</span> Built a full-stack e-commerce website enabling users to purchase medicines from global suppliers</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Status:</span> Currently in development (May 2025 - Present)</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Next.js</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">HTML</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">CSS</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-3">QuizzBayy - Educational Gaming App</h3>
+                    <div class="space-y-3 mb-4">
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Purpose:</span> Help users increase general knowledge through interactive quizzes</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Features:</span> 7 quiz categories, score tracking, engaging UI designed for learning</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Completed:</span> November 2024</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Android Studio</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Java</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">XML</span>
+                    </div>
+                </div>
+
+                <div class="project-card p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500">
+                    <h3 class="text-2xl font-bold mb-3">Network Threat Detection System</h3>
+                    <div class="space-y-3 mb-4">
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Focus:</span> Implementing Nmap automation for vulnerability testing and reporting</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Scope:</span> Integration with security tools to detect network threats with enhanced reporting capabilities</p>
+                        <p class="text-gray-400"><span class="font-semibold text-blue-400">Timeline:</span> Oct 2024 - Mar 2025</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Nmap</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Nikto</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Nessus</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Python</span>
+                        <span class="px-2 py-1 text-xs rounded bg-gray-700">Matplotlib</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Python</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Java</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">C</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">C++</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">SQL</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Security Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Nmap</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Nikto</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Nessus</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Metasploit</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Wireshark</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Tableau</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Docker</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Git</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Cisco Packet Tracer</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">TeamViewer</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Design Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Canva</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Figma</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Soft Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Leadership</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Communication</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Collaboration</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Adaptability</span>
+                        <span class="px-3 py-1 text-sm rounded bg-gray-700">Accountability</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">Languages</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p>English (High Proficiency)</p>
+                        <p>Hindi (High Proficiency)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Leadership & Involvement</h2>
+            
+            <div class="space-y-6">
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-2">Membership Chairperson - Accra Academic City Leo Club</h3>
+                    <p class="text-blue-400 mb-3">Oct 2024 - May 2025</p>
+                    <p class="text-gray-300">Currently leading membership initiatives and organizational growth</p>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-2">President - Accra Academic City Leo Club</h3>
+                    <p class="text-blue-400 mb-3">Nov 2022 - Oct 2024</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Led club activities and organized community service events</li>
+                        <li>• Managed cross-functional teams and coordinated with international partners</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-2">Student Ambassador - Academic City University</h3>
+                    <p class="text-blue-400 mb-3">Feb 2024 - Feb 2025</p>
+                    <p class="text-gray-300">Represented the university at various events and occasions</p>
+                </div>
+
+                <div class="p-6 rounded-lg border border-gray-700 bg-gray-800/50 hover:border-blue-500 transition">
+                    <h3 class="text-xl font-bold mb-2">Interviewer & Researcher - Tell Me More Radio Show</h3>
+                    <p class="text-blue-400 mb-3">Apr 2022 - Aug 2023</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Researched interviewees for productive interviews on Acity Radio</li>
+                        <li>• Interviewed Ghanaian influencers including Kobby Kyei and Bola Ray</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-gray-400 mb-12">Whether you're looking to collaborate on cybersecurity projects, discuss IT security, or explore opportunities—I'd love to hear from you!</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:singhsimran0227@gmail.com" class="flex items-center gap-3 px-6 py-3 rounded-lg border border-gray-700 bg-gray-800 hover:border-blue-500 transition">
+                    📧 singhsimran0227@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/simran-singh27" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-lg border border-gray-700 bg-gray-800 hover:border-blue-500 transition">
+                    💼 LinkedIn
+                </a>
+                <a href="tel:+919653054807" class="flex items-center gap-3 px-6 py-3 rounded-lg border border-gray-700 bg-gray-800 hover:border-blue-500 transition">
+                    📱 +91 9653054807
+                </a>
+                <a href="https://github.com/ElormDesmond/VulnScout" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-lg border border-gray-700 bg-gray-800 hover:border-blue-500 transition">
+                    🔗 GitHub
+                </a>
+            </div>
+
+            <div class="p-8 rounded-lg border border-gray-700 bg-gray-800/50 max-w-xl mx-auto">
+                <h3 class="text-xl font-bold mb-4">Quick Message</h3>
+                <form class="space-y-4" action="mailto:singhsimran0227@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500" required>
+                    <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500" required></textarea>
+                    <button type="submit" class="w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-500 mb-4">"Security is not a product, but a process." - Bruce Schneier</p>
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://github.com/ElormDesmond/VulnScout" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-2xl">🔗</a>
+                <a href="https://www.linkedin.com/in/simran-singh27" target="_blank" class="text-gray-400 hover:text-blue-400 transition text-2xl">💼</a>
+                <a href="mailto:singhsimran0227@gmail.com" class="text-gray-400 hover:text-blue-400 transition text-2xl">📧</a>
+            </div>
+            <p class="text-sm text-gray-600">© 2025 Shimran Singh. Built with passion for cybersecurity.</p>
+            <p class="text-xs text-gray-700 mt-2">Academic City University | BSc Information Technology | Ghana</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            icon.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
+        }
+
+        // Animated counter for impact metrics
+        const counters = document.querySelectorAll('.metric');
+        
+        const runCounter = (el) => {
+            const target = +el.dataset.value;
+            let count = 0;
+            const increment = target / 50;
+            
+            const interval = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    el.innerText = target;
+                    clearInterval(interval);
+                } else {
+                    el.innerText = Math.floor(count);
+                }
+            }, 30);
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+</body>
+</html>
